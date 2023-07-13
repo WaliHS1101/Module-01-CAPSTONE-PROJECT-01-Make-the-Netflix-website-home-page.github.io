@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            background-color: rgb(29, 28, 28);
+        }
+
+        .head {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.329)), url(img/main.bmp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin-bottom: 10px;
+        }
+
+        .head-main ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .head-main li {
+            list-style: none;
+        }
+
+        .nav-li-logo {
+            flex: 1;
+        }
+
+        .nav-logo {
+            width: 130px;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+
+        .nav-SignIn {
+            margin-top: 20px;
+            margin-right: 40px;
+        }
+
+        .SignUp-info {
+            color: white;
+            margin-top: 200px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            text-align: center;
+        }
+
+        .SignUp-info-down {
+            color: white;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            text-align: center;
+        }
+
+        .SignUp-down {
+            background-color: black;
+        }
+
+        .info {
+            grid-column: 2/3;
+            margin-bottom: 300px;
+        }
+
+        .down-info {
+            margin-bottom: 50px;
+            grid-column: 2/3;
+        }
+
+        .SignUp-input {
+            width: 400px;
+            height: 45px;
+            padding-left: 10px;
+            margin-bottom: 30px;
+            background-color: transparent;
+            color: white;
+        }
+
+        .SignUp-btn {
+            height: 45px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+            margin-left: 10px;
+        }
+
+        .body-main-color {
+            background-color: black;
+        }
+
+        .body-main1,
+        .body-main2,
+        .body-main3,
+        .body-main4 {
+            padding-top: 120px;
+        }
+
+        .body-video,
+        .body-img {
+            width: 80%;
+            display: block;
+            margin: auto;
+        }
+
+        .body-text1,
+        .body-text2,
+        .body-text3,
+        .body-text4 {
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-top: 60px;
+        }
+
+        .body-texth4 {
+            font-size: 23px;
+        }
+
+        .SignUp-footer {
+            color: rgb(211, 211, 211);
+            background-color: black;
+        }
+
+        .SignUp-footer-ul {
+            list-style: none;
+        }
+
+        .SignUp-footer-ul li {
+            margin-top: 10px;
+            font-size: small;
+        }
+
+        .SignUp-footer-ul a {
+            color: rgb(211, 211, 211);
+        }
+
+        .SignUp-Qus {
+            background-color: black;
+            text-align: center;
+        }
+
+        .Qus-h1 {
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+        .collapse-h4 {
+            background-color: rgb(29, 28, 28);
+            width: 90%;
+            border: 0px;
+        }
+
+        .card {
+            width: 90%;
+            background-color: rgb(29, 28, 28);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="head-main">
+            <ul>
+                <li class="nav-li-logo">
+                    <img class="nav-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png"
+                        alt="">
+                </li>
+                <li class="li-SignIn">
+                    <button class="nav-SignIn btn btn-danger" id="nav-SignIn" onclick="navSignIn()">Sign In</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="SignUp-info" id="SignUp-info">
+            <div class="info">
+                <h1 class="SignUp-h1" id="SignUp-h1">Unlimited movies, TV <br> shows, and more.</h1>
+                <h3 class="SignUp-h3 mt-4" id="SignUp-h3">Watch anywhere. Cancel anytime.</h3>
+                <p class="SignUp-p mt-4" id="SignUp-p">Ready to watch? Enter your email to create or restart your
+                    membership.</p>
+                <div class="SignUp-Form mt-5">
+                    <input class="SignUp-input" id="SignUp-input" type="text" placeholder="Email Address">
+                    <button class="btn btn-danger SignUp-btn " id="SignUp-btn" onclick="SignUp()">GET STARTED></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-main-color">
+        <div class="container">
+            <div class="body-main">
+                <div class="body-main1 row">
+
+                    <div class="body-text1 col-6 mt-3">
+                        <h1 class="body-texth1">Enjoy on your TV</h1>
+                        <h4 class="mt-3 body-texth4">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+                            Blu-ray players and more</h4>
+                    </div>
+                    <div class="body-video1 col-6">
+                        <video class="body-video"
+                            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+                            autoplay loop></video>
+                    </div>
+                </div>
+                <div class="main-linebreak bg-daek"></div>
+
+                <div class="body-main2 row">
+                    <div class="body-video2 col-6">
+                        <img class="body-img"
+                            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+                            alt="">
+                    </div>
+                    <div class="body-text2 col-6 mt-5">
+                        <h1 class="body-texth1">Download your programmes to watch offline</h1>
+                        <h4 class="mt-3 body-texth4">Save your favourites easilt and always have something to watch.
+                        </h4>
+                    </div>
+                </div>
+                <div class="main-linebreak bg-daek"></div>
+
+                <div class="body-main3 row">
+                    <div class="body-text3 col-6">
+                        <h1 class="body-texth1">Watch everywhere</h1>
+                        <h4 class="mt-3 body-texth4">Steam unlimited films and TV programmes on your phone, tablet,
+                            laptop and TV</h4>
+                    </div>
+                    <div class="body-video3 col-6">
+                        <video class="body-video"
+                            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
+                            autoplay loop></video>
+                    </div>
+                </div>
+
+                <div class="body-main4 row">
+                    <div class="body-video4 col-6">
+                        <img class="body-img"
+                            src="https://occ-0-38-1500.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.png?r=f55"
+                            alt="">
+                    </div>
+                    <div class="body-text4 col-6 mt-5">
+                        <h1 class="body-texth1">Create profiles for children</h1>
+                        <h4 class="mt-3 body-texth4">Send children on adventures with their favourite characters in a
+                            space made just for them -free with your membership.</h4>
+                    </div>
+                </div>
+                <div class="main-linebreak bg-daek"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="SignUp-down mt-2 pt-5 text-light">
+
+        <div class="SignUp-Qus ">
+            <h1 class="Qus-h1">Frequently Asked Questions</h1>
+        </div>
+
+        <div class="down-Qus">
+            <div class="Qus-info mt-4">
+                <h4 class="collapse-h4 p-4 bg-dark m-auto" data-bs-toggle="collapse" data-bs-target="#First"
+                    role="button">
+                    What is Netflix?</h4>
+                <div class="collapse" id="First">
+                    <div class="card card-body m-auto">
+                        <h5>Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+                            movies,
+                            anime, documentaries, and more on thousands of internet-connected devices.
+                            <br>
+                            <br>
+                            You can watch as much as you want, whenever you want without a single commercial all for one
+                            low monthly price. There's always something new to discover and new TV shows and movies are
+                            added every week!
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Qus-info mt-2">
+                <h4 class="collapse-h4 p-4 bg-dark m-auto" data-bs-toggle="collapse" data-bs-target="#Second"
+                    role="button">
+                    How much does Netflix cost?</h4>
+                <div class="collapse" id="Second">
+                    <div class="card card-body m-auto">
+                        <h5>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one
+                            fixed monthly fee. Plans range from Rs250 to Rs1,100 a month. No extra costs, no contracts.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Qus-info mt-2">
+                <h4 class="collapse-h4 p-4 bg-dark m-auto" data-bs-toggle="collapse" data-bs-target="#Third"
+                    role="button">
+                    Where can I watch?</h4>
+                <div class="collapse" id="Third">
+                    <div class="card card-body m-auto">
+                        <h5>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at
+                            netflix.com from your personal computer or on any internet-connected device that offers the
+                            Netflix app, including smart TVs, smartphones, tablets, streaming media players and game
+                            consoles.
+                            <br>
+                            <br>
+                            You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use
+                            downloads to watch while you're on the go and without an internet connection. Take Netflix
+                            with
+                            you anywhere.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Qus-info mt-2">
+                <h4 class="collapse-h4 p-4 bg-dark m-auto" data-bs-toggle="collapse" data-bs-target="#Fourth"
+                    role="button">
+                    How do I cancel?</h4>
+                <div class="collapse" id="Fourth">
+                    <div class="card card-body m-auto">
+                        <h5>Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+                            movies,
+                            anime, documentaries, and more on thousands of internet-connected devices.
+                            <br>
+                            <br>
+                            You can watch as much as you want, whenever you want without a single commercial all for one
+                            low monthly price. There's always something new to discover and new TV shows and movies are
+                            added every week!
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Qus-info mt-2">
+                <h4 class="collapse-h4 p-4 bg-dark m-auto" data-bs-toggle="collapse" data-bs-target="#Fifth"
+                    role="button">
+                    What can I watch on Netflix?</h4>
+                <div class="collapse" id="Fifth">
+                    <div class="card card-body m-auto">
+                        <h5>Netflix has an extensive library of feature films, documentaries, TV shows, anime,
+                            award-winning
+                            Netflix originals, and more. Watch as much as you want, anytime you want.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Qus-info mt-2">
+                <h4 class="collapse-h4 p-4 bg-dark m-auto" data-bs-toggle="collapse" data-bs-target="#Sixth"
+                    role="button">
+                    Is Netflix good for kids?</h4>
+                <div class="collapse" id="Sixth">
+                    <div class="card card-body m-auto">
+                        <h5>The Netflix Kids experience is included in your membership to give parents control while
+                            kids
+                            enjoy family-friendly TV shows and movies in their own space.
+                            <br>
+                            <br>
+                            Kids profiles come with PIN-protected parental controls that let you restrict the maturity
+                            rating of content kids can watch and block specific titles you don’t want kids to see.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="SignUp-info-down p-5" id="SignUp-info">
+            <div class="down-info">
+                <p class="SignUp-p mt-4" id="SignUp-p">Ready to watch? Enter your email to create or restart your
+                    membership.</p>
+                <div class="SignUp-Form mt-5">
+                    <input class="SignUp-input" id="SignUp-input" type="text" placeholder="Email Address">
+                    <button class="btn btn-danger SignUp-btn " id="SignUp-btn" onclick="SignUp()">GET STARTED></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="SignUp-footer mt-2 pt-4 p-3">
+
+            <p class="SignUp-footer-p pb-3 p-4">Questions? Contact us.</p>
+
+            <ul class="SignUp-footer-ul row">
+                <li class="col-4"><a href="">FAQ</a></li>
+                <li class="col-4"><a href="">Help Center</a></li>
+                <li class="col-4"><a href="">Account</a></li>
+                <li class="col-4"><a href="">Media Center</a></li>
+                <li class="col-4"><a href="">Investor Relations</a></li>
+                <li class="col-4"><a href="">Jobs</a></li>
+                <li class="col-4"><a href="">Ways to Watch</a></li>
+                <li class="col-4"><a href="">Terms of Use</a></li>
+                <li class="col-4"><a href="">Privacy</a></li>
+                <li class="col-4"><a href="">Cookie Preferences</a></li>
+                <li class="col-4"><a href="">Corporate Information</a></li>
+                <li class="col-4"><a href="">Contact Us</a></li>
+                <li class="col-4"><a href="">Speed Test</a></li>
+                <li class="col-4"><a href="">Legal Notices</a></li>
+                <li class="col-4"><a href="">Only on Netflix</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+
+        let person = [];
+
+        function navSignIn() {
+            window.location.href = "Signin.html";
+        }
+
+        function clr() {
+            document.getElementById("SignUp-input").value = "";
+        }
+
+        function SignUp() {
+            let Email = document.getElementById("SignUp-input").value;
+            if (Email == "") {
+                alert('Please enter an email address.');
+            }
+            else {
+                let check = person.find(obj => obj.Email == document.getElementById("SignUp-input").value)
+                if (check) {
+                    alert("Email already Exists")
+                }
+                else {
+                    person.push({ Email });
+                    console.log(person);
+                    clr()
+                }
+            }
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
